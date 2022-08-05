@@ -14,8 +14,7 @@ def org_generator(loci, size):  #size is number of organism in list
 
 def weighted_org_list(size, prop1, prop2, prop3, prop4):
     org_list =[]
-    i = 0
-    while i in range(0,size):
+    for i in range(0,size):
         temp_list = [0, 0, 0, 0]
         mut1 = random.randint(0,100)
         mut2 = random.randint(0,100)
@@ -30,7 +29,6 @@ def weighted_org_list(size, prop1, prop2, prop3, prop4):
         if mut4 <= prop4:
             temp_list[3] = 1
         org_list.append(temp_list)
-        i+=1
     return org_list
 
 def ones_counter(org_list):
